@@ -26,7 +26,7 @@ public class MessageController {
 
 
     //For sending JSON Data
-    @PostMapping("/json-publish")
+    @RequestMapping("/json-publish")
     public ResponseEntity<String > publishJson(@RequestBody User user){
         jsonProducer.sendMessage(user);
         return ResponseEntity.ok("Json Message Sent to Kafka");
